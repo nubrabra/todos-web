@@ -46,7 +46,7 @@ A clean and scalable **Todo List Application** built with **Next.js**, **Redux T
 
 ### **Prerequisites**
 
-- Node.js >= 14.0.0
+- Node.js >= 18.18.0
 - npm or yarn
 
 ### **Installation**
@@ -54,8 +54,8 @@ A clean and scalable **Todo List Application** built with **Next.js**, **Redux T
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/todo-list-nextjs.git
-   cd todo-list-nextjs
+   git clone https://github.com/nubrabra/todos-web.git
+   cd todos-web
    ```
 
 2. Install dependencies:
@@ -91,7 +91,7 @@ src/
 │
 ├── components/          # Reusable UI components
 │   ├── Layout/          # Page layout wrapper
-│   ├── Todo/            # Todo components (TodoList, TodoItem, TodoForm)
+│   └── Todo/            # Todo components (TodoList, TodoItem, TodoForm)
 │
 ├── pages/               # Next.js pages
 │   └── index.js         # Home page
@@ -105,12 +105,13 @@ src/
 │
 ├── helpers/             # Utility functions
 ├── theme.js             # MUI Theme setup
-├── __tests__/           # Unit tests
-│   ├── components/      # Tests for components
-│   ├── helpers/         # Tests for helper functions
-│   └── store/           # Tests for Redux slices
 │
-└── public/              # Static assets
+__tests__/           # Unit tests
+├── components/      # Tests for components
+├── helpers/         # Tests for helper functions
+├── store/           # Tests for Redux slices
+│
+public/              # Static assets
 ```
 
 ---
@@ -165,48 +166,21 @@ yarn test --coverage
 
 ### **Home Page**
 
-![Home Page](https://via.placeholder.com/600x400?text=Home+Page+Screenshot)
+![Home Page](https://drive.google.com/u/0/drive-viewer/AKGpihZCT7BYvz5PYw85um3C0EK-U-aNGLt-TalnlFpPmvmCISVSxTOnzzTTWhVMy0iTk55hCCvfHB-FTLwWTTSjCxZOzObgoYg4qJk=s1600-rw-v1)
 
 ### **Add Todo Form**
 
-![Add Todo](https://via.placeholder.com/600x400?text=Add+Todo+Screenshot)
+![Add Todo](https://drive.google.com/u/0/drive-viewer/AKGpihYHLwZ1Rx62UnNffK_QyQd-bbw4WXPB49grBb0A_KJWIhO1BvAqiVYzd_3X2HXQN68tvL_ieQTaWheSwzsdF6sv_p4HG49jQ2o=s1600-rw-v1)
 
 ### **Responsive Design**
 
-![Mobile View](https://via.placeholder.com/600x400?text=Mobile+View+Screenshot)
-
----
-
-## **Contributing**
-
-We welcome contributions! 🎉  
-To contribute:
-
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. Commit changes and push to your branch:
-   ```bash
-   git commit -m "Add your feature"
-   git push origin feature/your-feature-name
-   ```
-4. Open a Pull Request.
+![Mobile View](https://drive.google.com/u/0/drive-viewer/AKGpihbe8nUCFj7pPPSzL8QD3HWh7lGpFMESF_7X6jFOvK3rOlznm7yGNJMAt1l-I_AhENpgKX4Z9t4r11XqQmfVGQVR0EKwzTwn_mU=s1600-rw-v1)(https://drive.google.com/u/0/drive-viewer/AKGpihY0qDXioSD0Z5fR9djaHfeHEG5qveEs_TwtPvu68NrIwEwiiB_Ou0iLk77fspjz6l74mx7_Btx0egrrBl_8RpKivU4hdgjUSIM=s1600-rw-v1)
 
 ---
 
 ## **License**
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-### **Contact**
-
-For any questions, feel free to reach out:  
-**Your Name** - [Your Email](mailto:your.email@example.com)  
-GitHub: [Your GitHub Profile](https://github.com/your-username)
 
 ---
 
