@@ -1,36 +1,213 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# **Todo List Application**
 
-## Getting Started
+![Project Status](https://img.shields.io/badge/Status-Completed-green)  
+A clean and scalable **Todo List Application** built with **Next.js**, **Redux Toolkit**, **Material-UI (MUI)**, and **React Hook Form**, ensuring responsiveness and usability across all devices.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## **Table of Contents**
+
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Getting Started](#getting-started)
+4. [Project Structure](#project-structure)
+5. [Usage](#usage)
+6. [Testing](#testing)
+7. [Screenshots](#screenshots)
+8. [Contributing](#contributing)
+9. [License](#license)
+
+---
+
+## **Features**
+
+- ✅ **Add New Todos**: Form validation (title up to 256 characters, numeric user ID).
+- ✅ **Update Status**: Mark todos as completed or uncompleted.
+- ✅ **Delete Todos**: Remove unwanted todos.
+- ✅ **Pagination & Search**: Search todos by user ID and paginate results.
+- ✅ **Responsive Design**: Fully responsive UI using Material-UI.
+- ✅ **State Management**: Redux Toolkit for scalable state management.
+- ✅ **Error Handling & Loading States**: Smooth user experience with proper handling.
+- ✅ **Unit Tests**: Comprehensive testing using Jest and React Testing Library.
+
+---
+
+## **Tech Stack**
+
+- **Frontend**: Next.js, React.js, MUI (Material-UI)
+- **State Management**: Redux Toolkit
+- **Form Handling**: React Hook Form
+- **Testing**: Jest, React Testing Library
+- **API**: [DummyJSON Todos API](https://dummyjson.com/docs/todos)
+
+---
+
+## **Getting Started**
+
+### **Prerequisites**
+
+- Node.js >= 14.0.0
+- npm or yarn
+
+### **Installation**
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/todo-list-nextjs.git
+   cd todo-list-nextjs
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   yarn install
+   # or
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory:
+
+   ```env
+   NEXT_PUBLIC_API_URL=https://dummyjson.com/todos
+   ```
+
+4. Run the development server:
+
+   ```bash
+   yarn dev
+   # or
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## **Project Structure**
+
+```
+src/
+│
+├── components/          # Reusable UI components
+│   ├── Layout/          # Page layout wrapper
+│   ├── Todo/            # Todo components (TodoList, TodoItem, TodoForm)
+│
+├── pages/               # Next.js pages
+│   └── index.js         # Home page
+│
+├── services/            # API calls (Mock API integration)
+│   └── todoService.js
+│
+├── store/               # Redux setup
+│   ├── slices/          # Redux slices
+│   └── index.js         # Root store
+│
+├── helpers/             # Utility functions
+├── theme.js             # MUI Theme setup
+├── __tests__/           # Unit tests
+│   ├── components/      # Tests for components
+│   ├── helpers/         # Tests for helper functions
+│   └── store/           # Tests for Redux slices
+│
+└── public/              # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## **Usage**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Add a New Todo**
 
-## Learn More
+1. Click the "New Todos" button.
+2. Fill out the form:
+   - **Todo**: Description of the task (required, max 256 characters).
+   - **User ID**: Numeric ID (required, up to 8 digits).
+3. Click "Add" to save the task.
 
-To learn more about Next.js, take a look at the following resources:
+### **Mark as Completed/Uncompleted**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Click the "More" icon next to a task and select **Mark as completed** or **Mark as uncompleted**.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **Delete a Todo**
 
-## Deploy on Vercel
+- Click the "More" icon and choose **Delete**.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **Search by User ID**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Use the search bar to filter tasks by User ID.
+
+### **Pagination**
+
+- Navigate between pages using the pagination controls.
+
+---
+
+## **Testing**
+
+Run unit tests using Jest and React Testing Library:
+
+```bash
+yarn test
+# or
+npm run test
+```
+
+To view the test coverage report:
+
+```bash
+yarn test --coverage
+```
+
+---
+
+## **Screenshots**
+
+### **Home Page**
+
+![Home Page](https://via.placeholder.com/600x400?text=Home+Page+Screenshot)
+
+### **Add Todo Form**
+
+![Add Todo](https://via.placeholder.com/600x400?text=Add+Todo+Screenshot)
+
+### **Responsive Design**
+
+![Mobile View](https://via.placeholder.com/600x400?text=Mobile+View+Screenshot)
+
+---
+
+## **Contributing**
+
+We welcome contributions! 🎉  
+To contribute:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit changes and push to your branch:
+   ```bash
+   git commit -m "Add your feature"
+   git push origin feature/your-feature-name
+   ```
+4. Open a Pull Request.
+
+---
+
+## **License**
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+### **Contact**
+
+For any questions, feel free to reach out:  
+**Your Name** - [Your Email](mailto:your.email@example.com)  
+GitHub: [Your GitHub Profile](https://github.com/your-username)
+
+---
+
+**Enjoy building! 🚀**
