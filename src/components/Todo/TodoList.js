@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   OutlinedInput,
@@ -41,18 +41,29 @@ export default function TodoList() {
 
   const tableMaxWidth = { mobile: '100%', desktop: 650 };
 
+  const tableRef = useRef(null);
   const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     let didCancel = false;
     if (!didCancel) {
       dispatch(fetchTodos({ limit, page }));
+      scrollTableToTop();
     }
 
     return () => {
       didCancel = true;
     };
   }, [dispatch, page, limit]);
+
+  const scrollTableToTop = () => {
+    if (tableRef.current) {
+      tableRef.current.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   const handlePageChange = (event, newPage) => {
     dispatch(setPage(newPage + 1)); // เปลี่ยนหมายเลขหน้า
@@ -65,6 +76,7 @@ export default function TodoList() {
 
   const onSearch = () => {
     dispatch(fetchTodos({ limit, page, userId: searchText }));
+    scrollTableToTop();
   };
 
   const handleClearSearch = () => {
@@ -126,7 +138,7 @@ export default function TodoList() {
           overflow: 'hidden',
         }}
       >
-        <TableContainer component={Paper}>
+        <TableContainer ref={tableRef} component={Paper}>
           <Table
             stickyHeader
             sx={{
